@@ -3,7 +3,10 @@ language: node_js
 node_js:
   - "6"
   - "8"
-
+brancher:
+  only：
+  - "dev"
+  - "master"
 script:
   - "npm run cover"
 
