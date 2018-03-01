@@ -9,3 +9,5 @@ brancher:
   - "master"
 script:
   - "npm run cover"
+
+  #
