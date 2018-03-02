@@ -7,7 +7,12 @@ brancher:
   only：
   - "dev"
   - "master"
-script:
+insatll:
+  - "npm install"
+  - "npm install -g codecov"
+  script:
   - "npm run cover"
+  - "codecov"
+
 
   #
