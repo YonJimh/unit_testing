@@ -4,13 +4,13 @@ node_js:
   - "6"
   - "8"
 brancher:
-  only：
+  only:
   - "dev"
   - "master"
 insatll:
   - "npm install"
   - "npm install -g codecov"
-  script:
+script:
   - "npm run cover"
   - "codecov"
 
