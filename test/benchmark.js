@@ -1,11 +1,21 @@
-const {num1,num2}=require('../src/math');
+const {num1,num2}=require('../src/fn');
 
 
 const Benchmark = require('benchmark');
 var suite = new Benchmark.Suite;
 
 
-
+suite.add('num1 parseInt', ()=>{
+  num1('123456');
+}).add('Number', ()=>{
+  num2('123456');
+}).on('cycle', function(event) {
+  console.log(String(event.target));
+}).on('complete', function() { //完成事件
+  console.log('Fastest is ' + this.filter('fastest').map('name'));
+})
+// run async
+.run({ 'async': true });
 
 
 //官网例子
